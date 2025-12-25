@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CoffeWisdom - Bilgiyle Demlenen Kahve</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <header class="site-header">
@@ -21,18 +25,15 @@
               <a href="ozelHarmanlar.html">Özel Harmanlar</a>
             </div>
           </div>
-
-          <a href="#" class="nav-btn">Menü</a>
         </nav>
-
-        <div class="logo-container">
-          <a href="MainPage.html">
+        <div class="logo-container" onclick="logoEasterEgg()">
+          <a id="logo-redirect" onclick="scrollToTop()">
             <img src="Logo.png" alt="CoffeWisdom Logo" class="logo-img" />
           </a>
         </div>
 
         <nav class="nav-group nav-right">
-          <a href="#" class="nav-btn">Blog</a>
+          <a href="MainPage.html" class="nav-btn">Blog</a>
 
           <div class="dropdown">
             <a href="magaza.html" class="nav-btn">Mağaza ▾</a>
@@ -86,11 +87,10 @@
         <div class="footer-column">
           <h3>Hızlı Bağlantılar</h3>
           <ul class="footer-links">
-            <li><a href="#">Ana Sayfa</a></li>
-            <li><a href="#">Hakkımızda</a></li>
-            <li><a href="#">Menü & Fiyatlar</a></li>
-            <li><a href="#">Blog Yazıları</a></li>
-            <li><a href="#">İletişim</a></li>
+            <li><a href="MainPage.html">Ana Sayfa</a></li>
+            <li><a href="MainPage.html">Hakkımızda</a></li>
+            <li><a href="MainPage.html">Blog Yazıları</a></li>
+            <li><a href="MainPage.html">İletişim</a></li>
           </ul>
         </div>
 
@@ -113,6 +113,13 @@
       <div class="footer-bottom">
         &copy; 2025 CoffeWisdom. Tüm hakları saklıdır. | Designed with ☕
       </div>
+      <button
+        id="scroll-top"
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+      >
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
     </footer>
   </body>
+  <script src="Mainpage.js"></script>
 </html>
