@@ -1,94 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
-    <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Espresso</title>
+    <title>CoffeWisdom - Özel Harmanlar</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .blend-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 40px;
+        margin-top: 30px;
+      }
+      .blend-card {
+        background: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        border: 1px solid #eaddcf;
+      }
+      .blend-img {
+        width: 100%;
+        height: 200px;
+        background-color: #4b3621;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 4rem;
+      }
+      .blend-content {
+        padding: 30px;
+      }
+      .blend-title {
+        font-size: 1.5rem;
+        color: #4b3621;
+        margin-bottom: 10px;
+      }
+      .blend-tags {
+        margin-bottom: 20px;
+      }
+      .tag {
+        background: #eaddcf;
+        color: #4b3621;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        display: inline-block;
+        margin: 2px;
+      }
+      .blend-desc {
+        color: #666;
+        line-height: 1.6;
+        font-style: italic;
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
       <div class="header-container">
         <nav class="nav-group nav-left">
-          <a href="#" class="nav-btn">Hakkımızda</a>
-
+          <a href="#site-footer" class="nav-btn">Hakkımızda</a>
           <div class="dropdown">
             <a href="#" class="nav-btn">Kahveler ▾</a>
             <div class="dropdown-menu">
-              <a href="espresso.html">Espresso Bazlı</a>
-              <a href="filtre.html">Filtre Kahveler</a>
-              <a href="sogukKahve.html">Soğuk Kahveler</a>
-              <a href="ozelHarmanlar.html">Özel Harmanlar</a>
+              <a href="./espresso.html">Espresso Bazlı</a>
+              <a href="./filtre.html">Filtre Kahveler</a>
+              <a href="./soguk_kahveler.html">Soğuk Kahveler</a>
+              <a href="./ozelHarmanlar.html">Özel Harmanlar</a>
             </div>
           </div>
-
-          <a href="#" class="nav-btn">Menü</a>
         </nav>
-
         <div class="logo-container">
-          <a href="./MainPage.html">
-            <img src="Logo.png" alt="CoffeWisdom Logo" class="logo-img" />
-          </a>
+          <a id="logo-redirect" href="MainPage.html"
+            ><img src="Logo.png" alt="Logo" class="logo-img"
+          /></a>
         </div>
-
         <nav class="nav-group nav-right">
-          <a href="#" class="nav-btn">Blog</a>
-
+          <a href="MainPage.html" class="nav-btn">Blog</a>
           <div class="dropdown">
             <a href="magaza.html" class="nav-btn">Mağaza ▾</a>
             <div class="dropdown-menu">
-              <a href="kahveCekirdekleri.html">Kahve Çekirdekleri</a>
-              <a href="kupalarTermoslar.html">Kupalar & Termoslar</a>
-              <a href="demlemeEkipmanlari.html">Demleme Ekipmanları</a>
-              <a href="hediyeSetleri.html">Hediye Setleri</a>
+              <a href="./kahveCekirdekleri.html">Kahve Çekirdekleri</a>
+              <a href="./kupalarTermoslar.html">Kupalar & Termoslar</a>
+              <a href="./demlemeEkipmanlari.html">Demleme Ekipmanları</a>
+              <a href="./hediyeSetleri.html">Hediye Setleri</a>
             </div>
           </div>
-
-          <a href="#" class="nav-btn">İletişim</a>
+          <a
+            onclick="window.location.href='.site-footer'"
+            class="nav-btn"
+            style="cursor: pointer"
+            >İletişim</a
+          >
         </nav>
       </div>
     </header>
-    <footer class="site-footer">
+
+    <section class="hero-section">
+      <h1>Özel Harmanlar</h1>
+      <p>Ustalıkla seçilmiş, özenle kavrulmuş imza tatlar.</p>
+    </section>
+
+    <div class="content">
+      <h2>Wisdom Signature Serisi</h2>
+      <p>
+        Her bir harman, dünyanın farklı bölgelerinden gelen çekirdeklerin en
+        uyumlu halini yansıtmak için baristalarımız tarafından özel olarak
+        tasarlandı.
+      </p>
+
+      <div class="blend-grid">
+        <div class="blend-card">
+          <div class="blend-img"><i class="fa-solid fa-mountain-sun"></i></div>
+          <div class="blend-content">
+            <h3 class="blend-title">Morning Wisdom</h3>
+            <div class="blend-tags">
+              <span class="tag">Yüksek Kafein</span>
+              <span class="tag">Orta Kavrum</span>
+            </div>
+            <p class="blend-desc">
+              "Güne zinde başlamak isteyenler için. Brezilya ve Etiyopya
+              çekirdeklerinin narenciye notalarıyla buluştuğu enerji dolu bir
+              karışım."
+            </p>
+          </div>
+        </div>
+        <div class="blend-card">
+          <div class="blend-img"><i class="fa-solid fa-moon"></i></div>
+          <div class="blend-content">
+            <h3 class="blend-title">Midnight Decaf</h3>
+            <div class="blend-tags">
+              <span class="tag">Kafeinsiz</span>
+              <span class="tag">Koyu Kavrum</span>
+            </div>
+            <p class="blend-desc">
+              "Gece kahvesinden vazgeçemeyenler için. İsviçre Su Yöntemi ile
+              kafeini alınmış, çikolata ve karamel notaları baskın yumuşak
+              içim."
+            </p>
+          </div>
+        </div>
+        <div class="blend-card">
+          <div class="blend-img"><i class="fa-solid fa-book-open"></i></div>
+          <div class="blend-content">
+            <h3 class="blend-title">Library Blend</h3>
+            <div class="blend-tags">
+              <span class="tag">Dengeli</span>
+              <span class="tag">Tam Gövde</span>
+            </div>
+            <p class="blend-desc">
+              "Kitap okurken size eşlik edecek en iyi arkadaş. Kolombiya
+              çekirdeklerinin fındık ve baharat aromalarıyla oluşturduğu huzurlu
+              bir tat."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer" id="site-footer">
       <div class="footer-container">
         <div class="footer-column">
           <h3>CoffeWisdom</h3>
-          <p>
-            Kahve kokusu ve kitap huzurunu bir araya getiriyoruz. Her yudumda
-            bilgi, her sayfada yeni bir tat keşfedin. Sıcak bir ortam ve taze
-            fikirler için buradayız.
-          </p>
+          <p>Kahve kokusu ve kitap huzuru.</p>
         </div>
-
         <div class="footer-column">
-          <h3>Hızlı Bağlantılar</h3>
+          <h3>Bağlantılar</h3>
           <ul class="footer-links">
-            <li><a href="MainPage.html">Ana Sayfa</a></li>
-            <li><a href="MainPage.html">Hakkımızda</a></li>
-            <li><a href="menu.html">Menü & Fiyatlar</a></li>
-            <li><a href="MainPage.html">Blog Yazıları</a></li>
-            <li><a href=".footer">İletişim</a></li>
+            <li><a href="magaza.html">Mağaza</a></li>
           </ul>
         </div>
-
         <div class="footer-column">
           <h3>İletişim</h3>
           <ul class="footer-links">
             <li>📍 Ankara/baglica</li>
-            <li>📞 +666 666 666</li>
-            <li>📧 barisolgun02@gmail.com</li>
-            <br />
-            <li>
-              <a href="#">Instagram</a> • <a href="#">Twitter</a> •
-              <a href="#">Facebook</a> • <a href="#">LinkedIn</a> •
-              <a href="#">Youtube</a>
-            </li>
           </ul>
         </div>
       </div>
-
-      <div class="footer-bottom">
-        &copy; 2025 CoffeWisdom. Tüm hakları saklıdır. | Designed with ☕
-      </div>
+      <div class="footer-bottom">&copy; 2025 CoffeWisdom.</div>
+      <button
+        id="scroll-top"
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+      >
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
     </footer>
+    <script src="Mainpage.js"></script>
   </body>
 </html>

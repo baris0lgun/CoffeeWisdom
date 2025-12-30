@@ -5,6 +5,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Espresso</title>
+    <style>
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .shop-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        margin-top: 30px;
+      }
+      .product-card {
+        background: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        border: 1px solid #eaddcf;
+      }
+      .product-img-box {
+        width: 100%;
+        height: 200px;
+        background-color: #4b3621;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 4rem;
+      }
+      .product-info {
+        padding: 30px;
+      }
+      .product-title {
+        font-size: 1.5rem;
+        color: #4b3621;
+        margin-bottom: 10px;
+      }
+      .product-desc {
+        color: #666;
+        line-height: 1.6;
+      }
+      .product-img-box {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        border-bottom: 1px solid #eaddcf;
+      }
+
+      .product-img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -48,7 +103,45 @@
         </nav>
       </div>
     </header>
-    <footer class="site-footer">
+    <section class="hero-section">
+      <h1>Kahve Çekirdekleri</h1>
+      <p>Dünyanın en iyi çiftliklerinden, taze kavrulmuş.</p>
+    </section>
+    <div class="content">
+      <h2>Yöresel Kahveler</h2>
+      <div class="shop-grid">
+        <div class="product-card">
+          <div class="product-img-box">
+            <img src="./kahveResim.jpeg" alt="Etiyopya" />
+          </div>
+          <div class="product-info">
+            <div class="product-title">Etiyopya Yirgacheffe</div>
+            <div class="product-desc">250g | Çiçeksi & Limon notaları.</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-box">
+            <img src="./kahveResim.jpeg" alt="Kolombiya" />
+          </div>
+          <div class="product-info">
+            <div class="product-title">Kolombiya Supremo</div>
+            <div class="product-desc">250g | Karamel & Fındık notaları.</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-box">
+            <img src="./kahveResim.jpeg" alt="Guatemala" />
+          </div>
+          <div class="product-info">
+            <div class="product-title">Guatemala Antigua</div>
+            <div class="product-desc">250g | Baharat & Çikolata notaları.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer" id="site-footer">
       <div class="footer-container">
         <div class="footer-column">
           <h3>CoffeWisdom</h3>
@@ -63,10 +156,10 @@
           <h3>Hızlı Bağlantılar</h3>
           <ul class="footer-links">
             <li><a href="#">Ana Sayfa</a></li>
-            <li><a href="#">Hakkımızda</a></li>
+            <li><a href="#site-footer">Hakkımızda</a></li>
             <li><a href="#">Menü & Fiyatlar</a></li>
             <li><a href="#">Blog Yazıları</a></li>
-            <li><a href="#">İletişim</a></li>
+            <li><a href="#site-footer">İletişim</a></li>
           </ul>
         </div>
 

@@ -2,38 +2,104 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Espresso</title>
+    <title>Demleme Yöntemleri - CoffeeWisdom</title>
+    <style>
+      /* --- TABLO STİLLERİ --- */
+      .content {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      .brew-table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .brew-table th,
+      .brew-table td {
+        padding: 25px; /* Hücreleri genişletir */
+        text-align: center;
+        border-bottom: 1px solid #eaddcf;
+        vertical-align: top;
+      }
+
+      .brew-table th {
+        background-color: #4b3621;
+        color: #fff;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* İkon Satırı */
+      .icon-row td {
+        font-size: 3rem;
+        color: #4b3621;
+        background-color: #f9f5f0;
+        padding-top: 40px;
+        padding-bottom: 20px;
+      }
+
+      /* Başlık Satırı (Öğütüm, Süre vb.) */
+      .label-row {
+        background-color: #fdfbf8;
+        font-weight: bold;
+        color: #7d5a38;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+      }
+
+      .brew-table p {
+        line-height: 1.6;
+        color: #555;
+        font-size: 0.95rem;
+      }
+
+      /* Mobilde tabloyu kaydırılabilir yap */
+      @media (max-width: 768px) {
+        .content {
+          overflow-x: auto;
+        }
+        .brew-table {
+          min-width: 800px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
       <div class="header-container">
         <nav class="nav-group nav-left">
-          <a href="#" class="nav-btn">Hakkımızda</a>
-
+          <a href="#site-footer" class="nav-btn">Hakkımızda</a>
           <div class="dropdown">
             <a href="#" class="nav-btn">Kahveler ▾</a>
             <div class="dropdown-menu">
-              <a href="espresso.html">Espresso Bazlı</a>
-              <a href="filtre.html">Filtre Kahveler</a>
-              <a href="sogukKahve.html">Soğuk Kahveler</a>
-              <a href="ozelHarmanlar.html">Özel Harmanlar</a>
+              <a href="./espresso.html">Espresso Bazlı</a>
+              <a href="./filtre.html">Filtre Kahveler</a>
+              <a href="./soguk_kahveler.html">Soğuk Kahveler</a>
+              <a href="./ozelHarmanlar.html">Özel Harmanlar</a>
             </div>
           </div>
-
           <a href="#" class="nav-btn">Menü</a>
         </nav>
-
         <div class="logo-container">
           <a href="./MainPage.html">
             <img src="Logo.png" alt="CoffeWisdom Logo" class="logo-img" />
           </a>
         </div>
-
         <nav class="nav-group nav-right">
           <a href="#" class="nav-btn">Blog</a>
-
           <div class="dropdown">
             <a href="magaza.html" class="nav-btn">Mağaza ▾</a>
             <div class="dropdown-menu">
@@ -43,51 +109,101 @@
               <a href="hediyeSetleri.html">Hediye Setleri</a>
             </div>
           </div>
-
           <a href="#" class="nav-btn">İletişim</a>
         </nav>
       </div>
     </header>
+
     <div class="content">
-      <table>
+      <h2
+        style="
+          text-align: center;
+          color: #4b3621;
+          margin-bottom: 30px;
+          font-size: 2rem;
+        "
+      >
+        Demleme Yöntemleri Karşılaştırması
+      </h2>
+
+      <table class="brew-table">
+        <tr class="icon-row">
+          <td><i class="fa-solid fa-mug-saucer"></i></td>
+          <td><i class="fa-solid fa-glass-water"></i></td>
+          <td><i class="fa-solid fa-cube"></i></td>
+          <td><i class="fa-solid fa-mug-hot"></i></td>
+        </tr>
+
         <tr>
           <th>Moka Pot</th>
           <th>French Press</th>
           <th>Cold Brew</th>
           <th>Espresso</th>
         </tr>
+
         <tr>
           <td>
             <p>
-              Moka potta yapılan kahve yoğun, aromatik ve espressodan biraz daha
-              yumuşak bir içime sahiptir. Filtre kahveden daha serttir ama
-              gerçek espresso kadar kremalı ve basınçlı değildir.
+              İtalyan mutfaklarının vazgeçilmezi. Ocak üstünde basınçla demlenen
+              bu yöntem, espressoya en yakın ev tipi alternatiftir. Yoğun
+              gövdeli, hafif isli ve keskin bir tat sunar. Metal filtreden
+              geçtiği için yağlı ve aromatiktir.
             </p>
           </td>
           <td>
             <p>
-              French Press ile yapılan kahve, kahve çekirdeklerinin uzun süre
-              demlenmesiyle elde edilir. Bu yöntem, kahvenin doğal aromasını ve
-              zenginliğini korur. Kremalı ve yoğun bir içime sahiptir.
+              En klasik ve kolay demleme yöntemidir. Kalın öğütülmüş kahve
+              çekirdeklerinin sıcak suyla uzun süre (4-5 dk) temas etmesiyle
+              hazırlanır. Kağıt filtre kullanılmadığı için kahvenin tüm doğal
+              yağları fincana geçer, bu da çok yoğun ve zengin bir gövde sağlar.
             </p>
           </td>
           <td>
             <p>
-              Cold Brew yöntemiyle yapılan kahve, soğuk suyla demlenerek
-              hazırlanır. Bu yöntem, kahvenin daha yumuşak ve az asidik bir
-              tadını sağlar. Soğuk kahveler için idealdir.
+              Sabır gerektiren bir yöntemdir. Kahve, soğuk suyun içinde 12 ila
+              24 saat arasında buzdolabında demlenir. Isı kullanılmadığı için
+              kahvedeki acılık ve asidite ortaya çıkmaz. Sonuç; inanılmaz
+              yumuşak içimli, tatlı ama kafein oranı yüksek bir kahvedir.
             </p>
           </td>
           <td>
             <p>
-              Espresso, yoğun ve aromatik bir kahve türüdür. Yüksek basınçla
-              hazırlanan bu kahve, genellikle bir fincan içinde servis edilir ve
-              diğer kahve türlerinin temeli olarak kullanılır.
+              Kahve dünyasının temeli. Çok ince öğütülmüş kahveden 9 bar
+              basınçla sıcak su geçirilerek sadece 25-30 saniyede hazırlanır.
+              Üzerinde oluşan altın renkli 'krema' tabakası kalitesinin
+              göstergesidir. Cappuccino ve Latte gibi içeceklerin özüdür.
             </p>
           </td>
         </tr>
+
+        <tr class="label-row">
+          <td>Öğütüm Derecesi</td>
+          <td>Öğütüm Derecesi</td>
+          <td>Öğütüm Derecesi</td>
+          <td>Öğütüm Derecesi</td>
+        </tr>
+        <tr>
+          <td>İnce (Sofra Tuzu)</td>
+          <td>Çok Kalın (Kaya Tuzu)</td>
+          <td>Kalın</td>
+          <td>Çok İnce (Pudra Şekeri)</td>
+        </tr>
+
+        <tr class="label-row">
+          <td>Demleme Süresi</td>
+          <td>Demleme Süresi</td>
+          <td>Demleme Süresi</td>
+          <td>Demleme Süresi</td>
+        </tr>
+        <tr>
+          <td>3 - 5 Dakika</td>
+          <td>4 Dakika</td>
+          <td>12 - 24 Saat</td>
+          <td>25 - 30 Saniye</td>
+        </tr>
       </table>
     </div>
+
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-column">
@@ -98,7 +214,6 @@
             fikirler için buradayız.
           </p>
         </div>
-
         <div class="footer-column">
           <h3>Hızlı Bağlantılar</h3>
           <ul class="footer-links">
@@ -109,7 +224,6 @@
             <li><a href="#">İletişim</a></li>
           </ul>
         </div>
-
         <div class="footer-column">
           <h3>İletişim</h3>
           <ul class="footer-links">
@@ -125,7 +239,6 @@
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom">
         &copy; 2025 CoffeWisdom. Tüm hakları saklıdır. | Designed with ☕
       </div>

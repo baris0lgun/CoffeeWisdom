@@ -1,38 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
-    <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Espresso</title>
+    <title>CoffeWisdom - Filtre Kahve Rehberi</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      .recipe-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .recipe-card {
+        background-color: #fdfbf7;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        border: 1px solid #eaddcf;
+        transition: transform 0.3s ease;
+      }
+
+      .recipe-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(75, 54, 33, 0.15);
+      }
+
+      .recipe-header {
+        background-color: #4b3621;
+        color: #eaddcf;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .recipe-header h3 {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+
+      .recipe-body {
+        padding: 20px;
+        color: #3b2618;
+      }
+
+      .recipe-meta {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+        color: #6d5036;
+        border-bottom: 1px solid #eaddcf;
+        padding-bottom: 10px;
+      }
+
+      .meta-item i {
+        margin-right: 5px;
+        color: #b58d68;
+      }
+
+      .ingredients h4,
+      .steps h4 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+        color: #4b3621;
+        border-left: 3px solid #b58d68;
+        padding-left: 8px;
+      }
+
+      .ingredients ul,
+      .steps ol {
+        padding-left: 20px;
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+      }
+
+      .steps ol li {
+        margin-bottom: 8px;
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
       <div class="header-container">
         <nav class="nav-group nav-left">
-          <a href="#" class="nav-btn">Hakkımızda</a>
+          <a href="MainPage.html" class="nav-btn">Hakkımızda</a>
 
           <div class="dropdown">
             <a href="#" class="nav-btn">Kahveler ▾</a>
             <div class="dropdown-menu">
-              <a href="espresso.html">Espresso Bazlı</a>
-              <a href="filtre.html">Filtre Kahveler</a>
-              <a href="sogukKahve.html">Soğuk Kahveler</a>
-              <a href="ozelHarmanlar.html">Özel Harmanlar</a>
+              <a href="./espresso.html">Espresso Bazlı</a>
+              <a href="./filtre.html">Filtre Kahveler</a>
+              <a href="./soguk_kahveler.html">Soğuk Kahveler</a>
+              <a href="./ozelHarmanlar.html">Özel Harmanlar</a>
             </div>
           </div>
-
-          <a href="#" class="nav-btn">Menü</a>
         </nav>
-
-        <div class="logo-container">
-          <a href="./MainPage.html">
+        <div
+          class="logo-container"
+          onclick="if(typeof logoEasterEgg === 'function') logoEasterEgg()"
+        >
+          <a id="logo-redirect" href="MainPage.html">
             <img src="Logo.png" alt="CoffeWisdom Logo" class="logo-img" />
           </a>
         </div>
 
         <nav class="nav-group nav-right">
-          <a href="#" class="nav-btn">Blog</a>
+          <a href="MainPage.html" class="nav-btn">Blog</a>
 
           <div class="dropdown">
             <a href="magaza.html" class="nav-btn">Mağaza ▾</a>
@@ -44,11 +125,185 @@
             </div>
           </div>
 
-          <a href="#" class="nav-btn">İletişim</a>
+          <a
+            onclick="window.location.href='.site-footer'"
+            class="nav-btn"
+            style="cursor: pointer"
+            >İletişim</a
+          >
         </nav>
       </div>
     </header>
-    <footer class="site-footer">
+
+    <section class="hero-section hero-filter">
+      <h1>Filtre Kahve Rehberi</h1>
+      <p>Çekirdekten fincana, mükemmel demleme teknikleri.</p>
+    </section>
+
+    <div class="content">
+      <h2>Demleme Metotları</h2>
+      <p>
+        Filtre kahve, kahvenin en saf ve aromatik hallerinden biridir.
+        CoffeWisdom olarak, evde barista kalitesinde kahve demlemeniz için en
+        popüler yöntemleri derledik. Her bir yöntemin kendine has bir karakteri
+        vardır; damak tadınıza en uygun olanı seçin ve demlemeye başlayın.
+      </p>
+
+      <div class="recipe-grid">
+        <div class="recipe-card">
+          <div class="recipe-header">
+            <h3>Hario V60</h3>
+            <i class="fa-solid fa-filter"></i>
+          </div>
+          <div class="recipe-body">
+            <div class="recipe-meta">
+              <span class="meta-item"
+                ><i class="fa-regular fa-clock"></i> 3:00 dk</span
+              >
+              <span class="meta-item"
+                ><i class="fa-solid fa-droplet"></i> Orta-İnce</span
+              >
+            </div>
+
+            <div class="ingredients">
+              <h4>Gerekenler</h4>
+              <ul>
+                <li>20g Kahve</li>
+                <li>300ml Su (93°C)</li>
+                <li>V60 Ekipmanı & Filtre</li>
+              </ul>
+            </div>
+
+            <div class="steps">
+              <h4>Hazırlanış</h4>
+              <ol>
+                <li>Filtreyi ıslatın ve suyu dökün.</li>
+                <li>Kahveyi ekleyin, ortasına küçük bir çukur açın.</li>
+                <li>
+                  60g su ile "blooming" (çiçeklenme) yapın, 30sn bekleyin.
+                </li>
+                <li>Kalan suyu dairesel hareketlerle yavaşça dökün.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="recipe-header">
+            <h3>French Press</h3>
+            <i class="fa-solid fa-mug-hot"></i>
+          </div>
+          <div class="recipe-body">
+            <div class="recipe-meta">
+              <span class="meta-item"
+                ><i class="fa-regular fa-clock"></i> 4:00 dk</span
+              >
+              <span class="meta-item"
+                ><i class="fa-solid fa-align-justify"></i> Kalın Öğütüm</span
+              >
+            </div>
+
+            <div class="ingredients">
+              <h4>Gerekenler</h4>
+              <ul>
+                <li>30g Kahve</li>
+                <li>500ml Su (95°C)</li>
+                <li>French Press</li>
+              </ul>
+            </div>
+
+            <div class="steps">
+              <h4>Hazırlanış</h4>
+              <ol>
+                <li>Kahveyi hazneye dökün.</li>
+                <li>Suyun yarısını ekleyip 30sn karıştırın.</li>
+                <li>Kalan suyu ekleyin, kapağı kapatın ama bastırmayın.</li>
+                <li>4 dakika bekledikten sonra pistonu yavaşça indirin.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="recipe-header">
+            <h3>Chemex</h3>
+            <i class="fa-solid fa-flask"></i>
+          </div>
+          <div class="recipe-body">
+            <div class="recipe-meta">
+              <span class="meta-item"
+                ><i class="fa-regular fa-clock"></i> 4:30 dk</span
+              >
+              <span class="meta-item"
+                ><i class="fa-solid fa-layer-group"></i> Orta-Kalın</span
+              >
+            </div>
+
+            <div class="ingredients">
+              <h4>Gerekenler</h4>
+              <ul>
+                <li>30g Kahve</li>
+                <li>500ml Su (93°C)</li>
+                <li>Chemex & Özel Filtre</li>
+              </ul>
+            </div>
+
+            <div class="steps">
+              <h4>Hazırlanış</h4>
+              <ol>
+                <li>Kalın filtreyi yerleştirin ve bol sıcak suyla ıslatın.</li>
+                <li>Suyu boşaltıp kahveyi ekleyin.</li>
+                <li>60g su ile çiçeklenme yapın (45sn).</li>
+                <li>Suyu yavaşça, filtreye değdirmeden merkeze dökün.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="recipe-header">
+            <h3>Aeropress</h3>
+            <i class="fa-solid fa-syringe"></i>
+          </div>
+          <div class="recipe-body">
+            <div class="recipe-meta">
+              <span class="meta-item"
+                ><i class="fa-regular fa-clock"></i> 1:30 dk</span
+              >
+              <span class="meta-item"
+                ><i class="fa-solid fa-ellipsis"></i> İnce Öğütüm</span
+              >
+            </div>
+
+            <div class="ingredients">
+              <h4>Gerekenler</h4>
+              <ul>
+                <li>17g Kahve</li>
+                <li>240ml Su (85°C)</li>
+                <li>Aeropress Seti</li>
+              </ul>
+            </div>
+
+            <div class="steps">
+              <h4>Hazırlanış</h4>
+              <ol>
+                <li>Ters (Inverted) yöntemi için pistonu takın.</li>
+                <li>Kahveyi ve suyu ekleyip 10sn karıştırın.</li>
+                <li>1 dakika demlenmesini bekleyin.</li>
+                <li>Filtre başlığını takın, bardağa çevirin ve bastırın.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <p style="text-align: center; font-style: italic; opacity: 0.8">
+        * Kullanılan kahve çekirdeğinin tazeliği ve suyun kalitesi sonucu
+        etkileyen en önemli faktörlerdir.
+      </p>
+    </div>
+
+    <footer class="site-footer" id="site-footer">
       <div class="footer-container">
         <div class="footer-column">
           <h3>CoffeWisdom</h3>
@@ -62,11 +317,10 @@
         <div class="footer-column">
           <h3>Hızlı Bağlantılar</h3>
           <ul class="footer-links">
-            <li><a href="#">Ana Sayfa</a></li>
-            <li><a href="#">Hakkımızda</a></li>
-            <li><a href="#">Menü & Fiyatlar</a></li>
-            <li><a href="#">Blog Yazıları</a></li>
-            <li><a href="#">İletişim</a></li>
+            <li><a href="./MainPage.html">Ana Sayfa</a></li>
+            <li><a href="#site-footer">Hakkımızda</a></li>
+            <li><a href="./MainPage.html">Blog Yazıları</a></li>
+            <li><a href="#site-footer">İletişim</a></li>
           </ul>
         </div>
 
@@ -89,6 +343,14 @@
       <div class="footer-bottom">
         &copy; 2025 CoffeWisdom. Tüm hakları saklıdır. | Designed with ☕
       </div>
+      <button
+        id="scroll-top"
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+      >
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
     </footer>
+
+    <script src="Mainpage.js"></script>
   </body>
 </html>
